@@ -1,0 +1,34 @@
+{
+    "name": "froala/yii2-lepture-editor",
+    "description": "Editor is not a WYSIWYG editor, it is a plain text markdown editor. Thanks for the great project codemirror, without which editor can never be created.",
+    "type": "yii2-extension",
+    "keywords": [
+        "lepture",
+        "markdown",
+        "html",
+        "text",
+        "editor",
+        "wysiwyg",
+        "jquery-plugin",
+        "rich editor",
+        "rich text editor",
+        "rte",
+        "javascript",
+        "jquery"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dungphanxuan",
+            "email": "dungphanxuan@vccorp.vn",
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "dungphanxuan\\leptureeditor\\": ""
+        }
+    }
+}
