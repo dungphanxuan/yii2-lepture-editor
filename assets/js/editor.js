@@ -7005,9 +7005,26 @@ function drawLink(editor) {
  * Action for drawing an img.
  */
 function drawImage(editor) {
-  var cm = editor.codemirror;
-  var stat = getState(cm);
-  _replaceSelection(cm, stat.image, '![', '](http://)');
+    console.log('ok');
+    filepicker.setKey("ASqXuRFq3QDFch9SQYrZuz");
+
+    filepicker.pick(
+        {
+            mimetype: 'image/*',
+            container: 'window',
+            services: ['COMPUTER','CONVERT']
+        },
+        function(Blob){
+            console.log(JSON.stringify(Blob));
+            var cm = editor.codemirror;
+            var stat = getState(cm);
+            _replaceSelection(cm, stat.image, '![',']('+Blob.url+')');
+        },
+        function(FPError){
+            console.log(FPError.toString());
+        }
+    );
+
 }
 
 
